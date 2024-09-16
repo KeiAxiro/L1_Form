@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main>
+            <div class="container">
+                <div class="collapse mt-3" id="C_KDT">
+                    <div class="card card-body">
+                        <h3>Kuartil Data Tunggal</h3>
+                        <div class="row rounded">
+                            <form action="" method="get" class="col border-end">
+                                <h4 class="mt-1">Input</h4>
+                                <div
+                                    class="btn-group"
+                                    role="group"
+                                    aria-label="Basic checkbox toggle button group">
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="kuartil"
+                                        id="btncheck1"
+                                        value="1"
+                                        <?php
+                                        if ($i != null and $i == 1) {
+                                            echo "checked";
+                                        }
+                                        ?>
+                                        autocomplete="off" />
+                                    <label
+                                        class="btn btn-outline-primary"
+                                        for="btncheck1">Kuartil 1</label>
+    
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="kuartil"
+                                        id="btncheck2"
+                                        value="2"
+                                        <?php
+                                        if ($i != null and $i == 2) {
+                                            echo "checked";
+                                        } elseif ($i == null) {
+                                            echo "checked";
+                                        }
+                                        ?>
+                                        autocomplete="off" />
+                                    <label
+                                        class="btn btn-outline-primary"
+                                        for="btncheck2">Kuartil 2</label>
+    
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="kuartil"
+                                        id="btncheck3"
+                                        value="3"
+                                        <?php
+                                        if ($i != null and $i == 3) {
+                                            echo "checked";
+                                        }
+                                        ?>
+                                        autocomplete="off" />
+                                    <label
+                                        class="btn btn-outline-primary"
+                                        for="btncheck3">Kuartil 3</label>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Data:</label>
+                                    <input
+                                        required
+                                        type="text"
+                                        class="form-control form-control-sm"
+                                        name="n1"
+                                        id="n1"
+                                        aria-describedby="helpId"
+                                        value="<?= $n1 = ($n1 ==  null) ? null : $n1  ?>"
+                                        placeholder="1,2,3,4,5" />
+                                    <small id="helpId" class="form-text text-muted">Example: 2,1,12,2,3,4,5,6,7,8,9,10,11,....</small>
+    
+    
+                                </div>
+    
+                                <button
+                                    type="submit"
+                                    name="submit_T"
+                                    class="btn btn-primary mb-3">
+                                    Submit
+                                </button>
+    
+    
+                            </form>
+    
+                            <div class="col border-start">
+                                <h3 class="mt-1">Output</h3>
+                                <div class="border border-primary rounded p-2 bg-primary bg-gradient" style="--bs-bg-opacity: .5;">
+                                    <span>Data : <?= $n1 = ($n1 ==  null) ? null : $n1  ?></span>
+                                    <br>
+                                    <span>Data Sort : <?= $n1sort ?></span>
+                                    <br>
+                                    <span>n : <?= $n ?></span>
+                                    <br>
+                                    <span>Result : <?= $result ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <p class="d-inline-flex gap-1 mt-2">
+                    <a id="toggleKDT" class="btn btn-primary" data-bs-toggle="collapse" href="#C_KDT" role="button" aria-expanded="false" aria-controls="C_KDT">
+                        Kuartil Data Tunggal
+                    </a>
+                </p>
+    
+                
+            </div>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
