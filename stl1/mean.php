@@ -156,7 +156,7 @@ if (isset($_GET['submit_kt'])) {
     <header>
         <!-- place navbar here -->
         <?php
-        include("../navbar.php");
+        include("navbar.php");
         ?>
     </header>
     <main>

@@ -149,7 +149,7 @@ if (isset($_GET['submit_kt'])) {
     <header>
         <!-- place navbar here -->
         <?php
-        include("../navbar.php");
+        include("navbar.php");
         ?>
     </header>
     <main>
@@ -376,10 +376,11 @@ if (isset($_GET['submit_kt'])) {
                                         \text{Nilai} & Frekuensi \\
 
                                         <?php
+                                        $memek = null;
                                         for ($i = 0; $i < $nmodus; $i++) {
                                             $isModus = in_array($DataTabel[$i]['ft'], $modus_i);
                                             if ($isModus) {
-
+                                                $memek = $i;
 
                                         ?>
                                                 \hline
@@ -406,7 +407,10 @@ if (isset($_GET['submit_kt'])) {
                                 </div>
 
                                 <div class="col bg-warning rounded" style="color:black; --bs-bg-opacity: .74;" id="outkon">
+                                    <span>
 
+                                        modusnya adalah kolom yang mempunyai nilai: <?= $DataTabel[$memek]["nt"] ?> dan frekuensi: <?= $DataTabel[$memek]["ft"] ?>
+                                    </span>
                                 </div>
 
                             </div>
